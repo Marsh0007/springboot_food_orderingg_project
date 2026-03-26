@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+    <header class="topbar">
+        <div>
+            <h1>Food Ordering Dashboard</h1>
+            <p>Manage customers and view system data in one place</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="tabs-section">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="customers">Customers</button>
+                <button class="tab-btn" data-tab="products">Products</button>
+                <button class="tab-btn" data-tab="orders">Orders</button>
+                <button class="tab-btn" data-tab="payments">Payments</button>
+                <button class="tab-btn" data-tab="orderItems">Order Items</button>
+            </div>
+        </section>
+
+        <section class="panel-wrapper">
+            <!-- CUSTOMER TAB -->
+            <div class="tab-panel active" id="customers-panel">
+                <div class="panel-card">
+                    <div class="panel-header">
+                        <h2>Add Customer</h2>
+                        <p>Fill all customer fields and save them to the database.</p>
+                    </div>
+
+                    <form id="customerForm" class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" placeholder="Enter first name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" placeholder="Enter last name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone" placeholder="Enter phone number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Enter email address" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="address">Address</label>
+                            <textarea id="address" rows="4" placeholder="Enter customer address" required></textarea>
+                        </div>
+
+                        <div class="form-actions full-width">
+                            <button type="submit" class="primary-btn">Add Customer</button>
+                            <button type="button" class="secondary-btn" id="showCustomersBtn">Show Customers</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- PRODUCTS TAB -->
+            <div class="tab-panel" id="products-panel">
+                <div class="panel-card">
+                    <div class="panel-header">
+                        <h2>Products</h2>
+                        <p>Click the button to load all product records.</p>
+                    </div>
+
+                    <div class="center-action">
+                        <button class="primary-btn" id="showProductsBtn">Show Products</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ORDERS TAB -->
+            <div class="tab-panel" id="orders-panel">
+                <div class="panel-card">
+                    <div class="panel-header">
+                        <h2>Orders</h2>
+                        <p>Click the button to load all order records.</p>
+                    </div>
+
+                    <div class="center-action">
+                        <button class="primary-btn" id="showOrdersBtn">Show Orders</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAYMENTS TAB -->
+            <div class="tab-panel" id="payments-panel">
+                <div class="panel-card">
+                    <div class="panel-header">
+                        <h2>Payments</h2>
+                        <p>Click the button to load all payment records.</p>
+                    </div>
+
+                    <div class="center-action">
+                        <button class="primary-btn" id="showPaymentsBtn">Show Payments</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ORDER ITEMS TAB -->
+            <div class="tab-panel" id="orderItems-panel">
+                <div class="panel-card">
+                    <div class="panel-header">
+                        <h2>Order Items</h2>
+                        <p>Click the button to load all order item records.</p>
+                    </div>
+
+                    <div class="center-action">
+                        <button class="primary-btn" id="showOrderItemsBtn">Show Order Items</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="output-section">
+            <div class="panel-card">
+                <div class="panel-header">
+                    <h2>Output</h2>
+                    <p>Loaded data will appear here.</p>
+                </div>
+                <div id="messageBox"></div>
+                <div id="output" class="output-grid"></div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
