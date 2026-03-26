@@ -16,3 +16,6 @@ A backend food ordering management system built using Spring Boot and MySQL.
 - HTML
 - CSS
 - JavaScript
+
+## Frontend side
+- To execute the frontend side, go to the browser and type "http://localhost:8080/index.html"
